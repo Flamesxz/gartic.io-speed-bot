@@ -1,10 +1,163 @@
 // ==UserScript==
-// @name        GARTİC.İO SPEED BOT
-// @description Odalara hızlı bot göndermenizi sağlar
-// @version     1.0
-// @author      Qwyua
-// @match       *://*/*
-// @grant       GM_addStyle
+// @name                speed bot güncel
+// @description         yeni script
+// @version             6.8
+// @author              Qwyua
+// @match               *://gartic.io/*
+// @match               *://www.blockaway.net/*
+// @grant               GM_addStyle
+// @icon                https://i.hizliresim.com/mptijzd.png
 // ==/UserScript==
-let adet = "2" // 1-10 arası değer verebilirsiniz
-let string = location.href;let convertedString= string.toLowerCase();if(convertedString.indexOf('gartic.io') != -1){var bot  = document.createElement('button');bot.innerHTML='<button id="bot" class="btBlueBig" style="background-color:orange;border:1px solid orange;width:55px"></span><i class="gg-user-add"></i><strong></strong></button>';bot.setAttribute('style', 'position:absolute;z-index: 2;');document.body.appendChild(bot);document.getElementById("bot").addEventListener("click",tıklandı, false);function tıklandı(Event){const  croxy = "https://www.datatech.icu/";const loc  =new URL(window.location.href);const adres  =croxy+"#"+loc.pathname.replace("/", "");if(adet == 1){window.open(adres, "_blank");}if(adet == 2){window.open(adres, "_blank");window.open(adres, "_blank")}if(adet == 3){window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank")}if(adet == 4){window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank")}if(adet == 5){window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank")}if(adet == 6){window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank")}if(adet == 7){window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank")}if(adet == 8){window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank")}if(adet == 9){window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank")}if(adet == 10){window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank");window.open(adres, "_blank")}}GM_addStyle(`.gg-user-add {display: block;transform: scale(var(--ggs,1));box-sizing: border-box;width: 20px;height: 18px;left: 22px;background:linear-gradient(to left,currentColor 8px,transparent 0)no-repeat 14px 6px/6px 2px,linear-gradient(to left,currentColor 8px,transparent 0)no-repeat 16px 4px/2px 6px}.gg-user-add::after,.gg-user-add::before {content: "";display: block;box-sizing: border-box;position: absolute;border: 2px solid #002043;}.gg-user-add::before {width: 8px;height: 8px;border-radius: 30px;top: 0;left: 22px}.gg-user-add::after {width: 12px;height: 9px;border-bottom: 0;border-top-left-radius: 3px;border-top-right-radius: 3px;left: 20px;top: 9px}.btBlueBig:active{box-shadow: 1 200px #666;transform: translateY(2px);border: 1px solistring.toLowerCase();if(convertedString.indexOf('datatech') != -1){d #002043;}`);}if(convertedString.indexOf('datatech') != -1){let i  = window.location.hash;var gartic = "https://gartic.io/";let fe  = document.querySelector('input[id="url"]');setInterval(function(){fe.value = gartic+i.replace("#", "")});if(fe.value == null){}else{setInterval(autoClick,);function autoClick(){let go = document.querySelector('i[aria-hidden="true"]');go.dispatchEvent(new MouseEvent("click",{bubbles:true,button:0}));if(document.querySelector('i[aria-hidden="true"]').length>0){document.querySelector('i[aria-hidden="true"]')[0].click()}};setInterval(atoClick,);function atoClick(){let go = document.querySelector('button[type="submit"]');go.dispatchEvent(new MouseEvent("click",{bubbles:true,button:0}));if(document.querySelector('button[type="submit"]').length>0){document.querySelector('button[type="submit"]')[0].click()}};setInterval(auto,);function auto(){let go = document.querySelector('i[class="fa fa-arrow-right"]');go.dispatchEvent(new MouseEvent("click",{bubbles:true,button:0}));if(document.querySelector('i[class="fa fa-arrow-right"]').length>0){document.querySelector('i[class="fa fa-arrow-right"]')[0].click()}};}}
+
+let adet="7";//açılacak proxy sayısı
+
+let site=location.href.toLowerCase();//bulunduğunuz sitenin urlsini işler
+
+
+/*-IFRAME ALANI- */
+let iframealan = document.createElement('div');// div elementi oluşturma
+    iframealan.innerHTML ='<div id="iframealan"></div>';//html değeri verildiği yer
+     setInterval(function() { //komutun kendini yenilemesini&tekrarlamasını sağlar
+      if(document.title.indexOf("#") !== -1){ //eğer sayfa başlığında # varsa altta ki kodlar çalışır
+       if(document.querySelector('#iframealan')==null){ //eğer iframealanı yoksa altta ki kodlar çalışır
+        document.querySelector('div[class="scrollElements"]').appendChild(iframealan);//iframe alanını ekler
+        }
+      }
+
+     },100);//komutun hangi aralıklarla tekrarlanacağını belirleyen süre (1000[mili saniye]=1 saniye)
+//ıframe alanı kicksiz botun eklendiği yer
+
+
+
+if(site.indexOf('gartic.io')!=-1)//eğer bulunduğun sayfanın urlsinde gartic.io varsa alttaki kodlar çalışır
+   {
+
+/*BOTLARI KAPAT BUTONU*/
+      var bot2close=document.createElement('button');// buton elementi oluşturma
+      bot2close.innerHTML='<button class="btBlueBig" style="width:40px;left:126px;background-color:red;border:1px solid red;"></span><i class="gg-close-o" style="left:8px;"></i><strong></strong></button>'; //html değeri verildiği yer
+      bot2close.setAttribute('id','bot2close');//id nin verildiği yer
+      bot2close.setAttribute('style','position:absolute;z-index: 2;display:none');//butona style verildiği yer
+	  document.body.appendChild(bot2close);// butonu ekler
+      document.getElementById("bot2close").addEventListener("click",iframeclose,false);// eğer tıklanırsa iframeclose u çalıştıracak
+          function iframeclose(event)
+       {
+		       document.querySelector('#bot2close').style='position:absolute;z-index: 2;display:none;';// bot2close id sine sahip elementin style ini değiştirir
+		        document.querySelector('#iframealan').innerHTML='';// iframealan id li yerin html ını değiştirir
+
+	   };
+
+
+
+
+/*İframe ekleyen(kicksiz bot) buton*/
+      var bot2=document.createElement('button');// buton elementi oluşturma
+      bot2.innerHTML='<button id="bot2" class="btBlueBig" style="left:64px;width:54px;"></span><i class="gg-user-add"></i><strong style="left:4px;">²</strong></button>';//butona html değeri verme
+      bot2.setAttribute('style','position:absolute;z-index: 2;');// butona style verme
+	  document.body.appendChild(bot2); //butonu ekleme
+      document.getElementById("bot2").addEventListener("click",addiframe,false);// tıklayınca addiframe i çalıştıracak
+
+/*iframe&kicksiz bot un eklendiği yer*/
+       function addiframe(event)
+		    {
+		    document.querySelector('#bot2close').style='position:absolute;z-index: 2;display:block;';//botları kapat butonunu görünür hale getirir
+		        var iframebot=document.createElement('iframe');//iframe elementi oluşturur
+		        let ifrm="https://gartichack.tr.gg/play.htm#"+window.location.pathname; // url sonuna oda kodunu verir
+		        iframebot.setAttribute('src',ifrm);// url yi iframe de açar
+		        iframebot.setAttribute('id','frame');// iframe ye id verir
+		        iframebot.setAttribute('style','z-index: 2;display:none;'); //iframe ye style verir
+		        document.querySelector('#iframealan').appendChild(iframebot) // iframe alanına ekler
+	         };
+
+
+
+
+/*Proxy i açan buton*/
+       var bot=document.createElement('button');//buton elementi oluşturur
+	   bot.innerHTML='<button id="bot" class="btYellowBig" style="width:54px"></span><i class="gg-user-add"></i><strong></strong></button>';//html değeri verilir
+       bot.setAttribute('style','position:absolute;z-index: 2;');// style verilir
+	   document.body.appendChild(bot);// butonu ekler
+	   document.getElementById("bot").addEventListener("click",openproxy,false);//butona tıklandığında openproxy i çalıştırır
+	  function openproxy(Event){
+       let link="https://blockaway.net/#"+window.location.href
+		   for(let i =0;i<=adet;i++){window.open(link,"_blank");}
+       }}
+setInterval(function(){
+let linkyeri=document.querySelector('input[id="url"]');
+if(site.indexOf('away.net/#')!=-1){
+	if(linkyeri.value=="")
+		{
+    linkyeri.value="https://gartic.io/"+window.location.hash.replace("#https://gartic.io/","");//link yerine değer verir
+	document.querySelector('i[class="fa fa-arrow-right"]').dispatchEvent(new MouseEvent("click",{bubbles:true,button:0}//butona tıklatır
+          ))}}})
+
+
+GM_addStyle(`
+.gg-close-o {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 40px
+}
+.gg-close-o::after,
+.gg-close-o::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: currentColor;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 8px;
+    left: 3px
+}
+.gg-close-o::after {
+    transform: rotate(-45deg)
+}
+
+
+.gg-user-add
+	{
+	display:block;
+	transform:scale(var(--ggs,1));
+	box-sizing:border-box;
+	width:20px;
+	height:18px;
+	background:linear-gradient(to left,currentColor 8px,transparent 0)no-repeat 14px 6px/6px 2px,linear-gradient(to left,currentColor 8px,transparent 0)no-repeat 16px 4px/2px 6px
+}
+.gg-user-add::after,.gg-user-add::before
+	{
+	content:"";
+	display:block;
+	box-sizing:border-box;
+	position:absolute;
+	border:2px solid
+}
+.gg-user-add::before
+	{
+	width:8px;
+	height:8px;
+	border-radius:30px;
+	top:0;
+	left:20px
+}
+.gg-user-add::after
+	{
+	left:18px;
+	width:12px;
+	height:9px;
+	border-bottom:0;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+	top:9px
+}
+`);
+
+
+
+//end
